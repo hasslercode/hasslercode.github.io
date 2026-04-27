@@ -122,6 +122,10 @@
                     </div>
                 </button>
                 <a href="assets/cv/CVHassler2026.pdf" download class="hidden sm:inline-flex border border-nav-border px-4 py-2 rounded-full text-xs hover:bg-hover-nav transition text-nav-text" aria-label="Descargar CV de Hassler Isaac en PDF">Descargar CV <i class="fas fa-download ml-2" aria-hidden="true"></i></a>
+                <a href="assets/cv/CVHassler2026.pdf" download class="mobile-cv-quick md:hidden" aria-label="Descargar CV en móvil">
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                    <span>CV</span>
+                </a>
                 <!-- Hamburger -->
                 <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
                     <span class="hamburger-bar block w-6 h-0.5 bg-current transition-all duration-300"></span>
@@ -131,12 +135,14 @@
             </div>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="mobile-menu hidden md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 text-sm font-medium border-t border-white/5">
-            <a href="#work" class="nav-link mobile-nav-link">Experiencia</a>
-            <a href="#expertise" class="nav-link mobile-nav-link">Stack técnico</a>
-            <a href="#personal-projects" class="nav-link mobile-nav-link">Proyectos</a>
-            <a href="#contact" class="nav-link mobile-nav-link">Contacto</a>
-            <a href="assets/cv/CVHassler2026.pdf" download class="border border-nav-border px-4 py-2 rounded-full text-xs text-center hover:bg-hover-nav transition text-nav-text w-full">Descargar CV <i class="fas fa-download ml-2" aria-hidden="true"></i></a>
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden px-5 pb-5 pt-3 border-t border-white/5">
+            <div class="mobile-menu-links">
+                <a href="#work" class="mobile-menu-link mobile-nav-link"><i class="fas fa-briefcase" aria-hidden="true"></i><span>Experiencia</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                <a href="#expertise" class="mobile-menu-link mobile-nav-link"><i class="fas fa-layer-group" aria-hidden="true"></i><span>Stack técnico</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                <a href="#personal-projects" class="mobile-menu-link mobile-nav-link"><i class="fas fa-lightbulb" aria-hidden="true"></i><span>Proyectos</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                <a href="#contact" class="mobile-menu-link mobile-nav-link"><i class="fas fa-envelope" aria-hidden="true"></i><span>Contacto</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+            <a href="assets/cv/CVHassler2026.pdf" download class="mobile-menu-cv-btn">Descargar CV <i class="fas fa-download ml-2" aria-hidden="true"></i></a>
         </div>
     </nav>
 
@@ -170,7 +176,7 @@
                     <!-- Logos empresas -->
                     <div>
                         <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-4">He trabajado con</p>
-                        <div class="flex flex-wrap items-end gap-x-4 gap-y-4">
+                        <div class="company-logos-row flex flex-wrap items-end gap-x-4 gap-y-4">
                             <!-- Bancolombia -->
                             <div class="company-logo-item">
                                 <img src="https://www.bancolombia.com/wcm/connect/b8e4c3f2-36a9-497d-a125-ac04f83b0bf8/LogoBancolombia.png?MOD=AJPERES" alt="Bancolombia" data-fallback="Bancolombia"
@@ -207,7 +213,7 @@
 
                 <!-- Columna derecha: foto con decoraciones -->
                 <div class="flex flex-col justify-center items-center mt-4 md:mt-0 md:self-stretch">
-                    <!-- Wrapper con tamaño fijo: todo se posiciona dentro de él -->
+                    <!-- Wrapper con tamaño fijo: los elementos se posicionan dentro de él -->
                     <div class="relative flex items-center justify-center w-52 h-52 sm:w-72 sm:h-72 md:w-96 md:h-96">
                     <!-- Glow radial detrás de la foto -->
                     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -445,106 +451,122 @@
         <span class="timeline-pulse"></span>
     </div>
 
-    <section id="expertise" class="py-24 px-6" aria-labelledby="expertise-heading">
+    <section id="expertise" class="stack-showcase py-20 md:py-24 px-4 md:px-6" aria-labelledby="expertise-heading">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10 md:mb-12">
                 <div class="flex justify-center mb-4">
                     <span class="expertise-badge">📦 STACK TÉCNICO</span>
                 </div>
-                <h2 id="expertise-heading" class="text-3xl md:text-4xl font-bold leading-tight mb-4">Stack para construir desde <span class="purple-gradient-text">cero</span>.</h2>
-                <p class="text-gray-400 text-sm md:text-base mt-6 max-w-3xl mx-auto leading-relaxed">Combino experiencia en frontend, backend y prácticas de entrega continua para mover productos desde idea hasta producción con velocidad y calidad.</p>
+                <h2 id="expertise-heading" class="text-3xl md:text-5xl font-bold leading-tight mb-4">Stack para construir desde <span class="purple-gradient-text">cero</span>.</h2>
+                <p class="text-gray-400 text-sm md:text-base mt-4 max-w-3xl mx-auto leading-relaxed">Combino experiencia en frontend, backend y prácticas de entrega continua para mover productos desde idea hasta producción con velocidad y calidad.</p>
             </div>
 
-            <!-- Franja de tecnologías principales -->
-            <div class="tech-strip mb-14" aria-label="Tecnologías principales">
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/angular/e23237" class="w-5 h-5" alt="">Angular</span>
-                <span class="tech-strip-divider" aria-hidden="true"></span>
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/typescript/3178c6" class="w-5 h-5" alt="">TypeScript</span>
-                <span class="tech-strip-divider" aria-hidden="true"></span>
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/react/61dafb" class="w-5 h-5" alt="">React</span>
-                <span class="tech-strip-divider" aria-hidden="true"></span>
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/laravel/ff2d20" class="w-5 h-5" alt="">Laravel</span>
-                <span class="tech-strip-divider" aria-hidden="true"></span>
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/springboot/6db33f" class="w-5 h-5" alt="">Spring Boot</span>
-                <span class="tech-strip-divider" aria-hidden="true"></span>
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/fastapi/009688" class="w-5 h-5" alt="">FastAPI</span>
-                <span class="tech-strip-divider" aria-hidden="true"></span>
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/jest/c21325" class="w-5 h-5" alt="">Jest</span>
-                <span class="tech-strip-divider" aria-hidden="true"></span>
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/cypress/ffffff" class="w-5 h-5" alt="">Cypress</span>
-                <span class="tech-strip-divider" aria-hidden="true"></span>
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/playwright/2ead33" class="w-5 h-5" alt="">Playwright</span>
-                <span class="tech-strip-divider" aria-hidden="true"></span>
-                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/githubcopilot/ffffff" class="w-5 h-5" alt="">GitHub Copilot</span>
+            <div class="stack-pillar-strip mb-8 md:mb-10">
+                <div class="stack-pillar-item">
+                    <i class="fas fa-rocket stack-pillar-icon text-purple-400" aria-hidden="true"></i>
+                    <div>
+                        <strong>Moderno</strong>
+                        <small>Tecnologías actuales</small>
+                    </div>
+                </div>
+                <div class="stack-pillar-item">
+                    <i class="fas fa-layer-group stack-pillar-icon text-sky-400" aria-hidden="true"></i>
+                    <div>
+                        <strong>Escalable</strong>
+                        <small>Arquitecturas sólidas</small>
+                    </div>
+                </div>
+                <div class="stack-pillar-item">
+                    <i class="fas fa-shield-alt stack-pillar-icon text-lime-400" aria-hidden="true"></i>
+                    <div>
+                        <strong>Confiable</strong>
+                        <small>Calidad y testing</small>
+                    </div>
+                </div>
+                <div class="stack-pillar-item">
+                    <i class="fas fa-bolt stack-pillar-icon text-amber-400" aria-hidden="true"></i>
+                    <div>
+                        <strong>Productivo</strong>
+                        <small>DevOps e IA</small>
+                    </div>
+                </div>
             </div>
 
-            <!-- Paneles por dominio -->
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Frontend Engineering -->
-                <article class="skill-panel">
-                    <div class="skill-panel-header">
-                        <i class="fas fa-code text-purple-400"></i>
-                        <h4 class="text-white font-bold text-base">Frontend Engineering</h4>
+            <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+                <article class="stack-domain-card">
+                    <div class="stack-domain-head">
+                        <div class="stack-domain-badge"><i class="fas fa-code"></i></div>
+                        <div>
+                            <h3>Frontend</h3>
+                            <p>Interfaces rápidas y mantenibles</p>
+                        </div>
                     </div>
-                    <div class="skill-tag-list">
-                        <span class="skill-tag skill-tag-strong">Angular</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag skill-tag-strong">TypeScript</span>
-                        <span class="skill-tag">RxJS</span>
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS / SASS</span>
-                        <span class="skill-tag">Microfrontends</span>
-                    </div>
-                </article>
-
-                <!-- Backend y APIs -->
-                <article class="skill-panel">
-                    <div class="skill-panel-header">
-                        <i class="fas fa-database text-purple-400"></i>
-                        <h4 class="text-white font-bold text-base">Backend y APIs</h4>
-                    </div>
-                    <div class="skill-tag-list">
-                        <span class="skill-tag skill-tag-strong">Laravel</span>
-                        <span class="skill-tag">Lumen</span>
-                        <span class="skill-tag">Spring Boot</span>
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">WebSockets</span>
+                    <div class="stack-chip-grid">
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/angular/e23237" class="w-4 h-4" alt="">Angular</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/react/61dafb" class="w-4 h-4" alt="">React</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/typescript/3178c6" class="w-4 h-4" alt="">TypeScript</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/reactivex/b7178c" class="w-4 h-4" alt="">RxJS</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/html5/e34c26" class="w-4 h-4" alt="">HTML5</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/sass/c6538c" class="w-4 h-4" alt="">CSS / SASS</span>
+                        <span class="stack-chip"><i class="fas fa-puzzle-piece" aria-hidden="true"></i>Microfrontends</span>
                     </div>
                 </article>
 
-                <!-- Calidad, Testing y DevOps -->
-                <article class="skill-panel">
-                    <div class="skill-panel-header">
-                        <i class="fas fa-infinity text-purple-400"></i>
-                        <h4 class="text-white font-bold text-base">Calidad, Testing y DevOps</h4>
+                <article class="stack-domain-card">
+                    <div class="stack-domain-head">
+                        <div class="stack-domain-badge"><i class="fas fa-database"></i></div>
+                        <div>
+                            <h3>Backend y APIs</h3>
+                            <p>Servicios robustos y escalables</p>
+                        </div>
                     </div>
-                    <div class="skill-tag-list">
-                        <span class="skill-tag skill-tag-strong">CI/CD</span>
-                        <span class="skill-tag">Azure DevOps</span>
-                        <span class="skill-tag">SonarQube</span>
-                        <span class="skill-tag">Artifactory</span>
-                        <span class="skill-tag">Jest</span>
-                        <span class="skill-tag">Cypress</span>
-                        <span class="skill-tag skill-tag-strong">Playwright</span>
-                        <span class="skill-tag">Clean Code</span>
+                    <div class="stack-chip-grid">
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/laravel/ff2d20" class="w-4 h-4" alt="">Laravel</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/lumen/e74430" class="w-4 h-4" alt="">Lumen</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/springboot/6db33f" class="w-4 h-4" alt="">Spring Boot</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/fastapi/009688" class="w-4 h-4" alt="">FastAPI</span>
+                        <span class="stack-chip"><i class="fas fa-random" aria-hidden="true"></i>REST APIs</span>
+                        <span class="stack-chip"><i class="fas fa-wifi" aria-hidden="true"></i>WebSockets</span>
                     </div>
                 </article>
 
-                <!-- Productividad e IA -->
-                <article class="skill-panel">
-                    <div class="skill-panel-header">
-                        <i class="fas fa-brain text-purple-400"></i>
-                        <h4 class="text-white font-bold text-base">Productividad e IA</h4>
+                <article class="stack-domain-card">
+                    <div class="stack-domain-head">
+                        <div class="stack-domain-badge"><i class="fas fa-infinity"></i></div>
+                        <div>
+                            <h3>Calidad, Testing y DevOps</h3>
+                            <p>Entregas seguras y automatizadas</p>
+                        </div>
                     </div>
-                    <div class="skill-tag-list">
-                        <span class="skill-tag skill-tag-strong">GitHub Copilot</span>
-                        <span class="skill-tag">Prompt-based Dev</span>
-                        <span class="skill-tag">Arquitectura modular</span>
-                        <span class="skill-tag">DX First</span>
+                    <div class="stack-chip-grid">
+                        <span class="stack-chip"><i class="fas fa-code-branch" aria-hidden="true"></i>CI/CD</span>
+                        <span class="stack-chip"><img src="https://miro.medium.com/1*Ome-oSxDNx7mQxJFZJ-NJg.png" class="w-4 h-4 object-contain" alt="">Azure DevOps</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/sonarqube/4e9fde" class="w-4 h-4" alt="">SonarQube</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/junit5/25a162" class="w-4 h-4" alt="">JUnit</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/cypress/ffffff" class="w-4 h-4" alt="">Cypress</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/playwright/2ead33" class="w-4 h-4" alt="">Playwright</span>
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/jfrog/40dbe7" class="w-4 h-4" alt="">Artifactory</span>
+                        <span class="stack-chip"><i class="fas fa-gem" aria-hidden="true"></i>Clean Code</span>
+                    </div>
+                </article>
+
+                <article class="stack-domain-card">
+                    <div class="stack-domain-head">
+                        <div class="stack-domain-badge"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <h3>Productividad e IA</h3>
+                            <p>Herramientas que multiplican impacto</p>
+                        </div>
+                    </div>
+                    <div class="stack-chip-grid">
+                        <span class="stack-chip"><img src="https://cdn.simpleicons.org/githubcopilot/ffffff" class="w-4 h-4" alt="">GitHub Copilot</span>
+                        <span class="stack-chip"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>Prompt-based Dev</span>
+                        <span class="stack-chip"><i class="fas fa-cube" aria-hidden="true"></i>Arquitectura modular</span>
+                        <span class="stack-chip"><i class="far fa-heart" aria-hidden="true"></i>DX First</span>
                     </div>
                 </article>
             </div>
+
         </div>
     </section>
 

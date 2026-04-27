@@ -42,16 +42,16 @@ mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden', isOpen);
     mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
     const bars = mobileMenuBtn.querySelectorAll('.hamburger-bar');
-    if (!isOpen) {
-        bars[0].style.transform = 'translateY(8px) rotate(45deg)';
-        bars[1].style.opacity = '0';
-        bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
-        bars[2].style.width = '1.5rem';
-    } else {
+    if (isOpen) {
         bars[0].style.transform = '';
         bars[1].style.opacity = '';
         bars[2].style.transform = '';
         bars[2].style.width = '';
+    } else {
+        bars[0].style.transform = 'translateY(8px) rotate(45deg)';
+        bars[1].style.opacity = '0';
+        bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+        bars[2].style.width = '1.5rem';
     }
 });
 
@@ -96,3 +96,78 @@ document.querySelectorAll('img.company-logo').forEach(img => {
         this.replaceWith(fallback);
     });
 });
+
+// ===== MOBILE LOGO SLIDER =====
+const companyLogosRow = document.querySelector('.company-logos-row');
+let logoSliderRafId = null;
+let logoSliderPaused = false;
+
+function cleanupLogoClones() {
+    if (!companyLogosRow) return;
+    companyLogosRow.querySelectorAll('[data-logo-clone="true"]').forEach(node => node.remove());
+    companyLogosRow.scrollLeft = 0;
+    delete companyLogosRow.dataset.sliderReady;
+}
+
+function startMobileLogoSlider() {
+    if (!companyLogosRow) return;
+
+    const isMobile = globalThis.matchMedia('(max-width: 1023px)').matches;
+    const reducedMotion = globalThis.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (logoSliderRafId) {
+        cancelAnimationFrame(logoSliderRafId);
+        logoSliderRafId = null;
+    }
+
+    if (!isMobile || reducedMotion) {
+        companyLogosRow.classList.remove('is-mobile-slider');
+        cleanupLogoClones();
+        return;
+    }
+
+    companyLogosRow.classList.add('is-mobile-slider');
+
+    if (!companyLogosRow.dataset.sliderReady) {
+        const originals = Array.from(companyLogosRow.children);
+        originals.forEach(item => {
+            const clone = item.cloneNode(true);
+            clone.dataset.logoClone = 'true';
+            clone.setAttribute('aria-hidden', 'true');
+            companyLogosRow.appendChild(clone);
+        });
+        companyLogosRow.dataset.sliderReady = 'true';
+    }
+
+    if (!companyLogosRow.dataset.sliderBound) {
+        companyLogosRow.addEventListener('touchstart', () => {
+            logoSliderPaused = true;
+        }, { passive: true });
+        companyLogosRow.addEventListener('touchend', () => {
+            logoSliderPaused = false;
+        }, { passive: true });
+        companyLogosRow.addEventListener('mouseenter', () => {
+            logoSliderPaused = true;
+        });
+        companyLogosRow.addEventListener('mouseleave', () => {
+            logoSliderPaused = false;
+        });
+        companyLogosRow.dataset.sliderBound = 'true';
+    }
+
+    const step = () => {
+        if (!logoSliderPaused) {
+            companyLogosRow.scrollLeft += 0.6;
+            const loopPoint = companyLogosRow.scrollWidth / 2;
+            if (companyLogosRow.scrollLeft >= loopPoint) {
+                companyLogosRow.scrollLeft -= loopPoint;
+            }
+        }
+        logoSliderRafId = requestAnimationFrame(step);
+    };
+
+    logoSliderRafId = requestAnimationFrame(step);
+}
+
+startMobileLogoSlider();
+globalThis.addEventListener('resize', startMobileLogoSlider);
