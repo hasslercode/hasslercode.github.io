@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== SEO PRIMARY ===== -->
+    <title>Hassler Isaac — Ingeniero Frontend & Full-Stack | Angular · TypeScript · Microfrontends</title>
+    <meta name="description" content="Portafolio de Hassler Isaac, Ingeniero de Software con 6+ años de experiencia en Angular, TypeScript, microfrontends y desarrollo full-stack. Especializado en banca y e-commerce. Disponible para nuevos proyectos.">
+    <meta name="keywords" content="Ingeniero Frontend, Full-Stack Developer, Angular, TypeScript, React, Microfrontends, Colombia, Medellín, Bancolombia, Software Engineer, portafolio, desarrollador web">
+    <meta name="author" content="Hassler Enrique Isaac Acosta">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hassler.dev/">
+
+    <!-- ===== OPEN GRAPH (LinkedIn, Facebook, WhatsApp) ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hassler.dev/">
+    <meta property="og:title" content="Hassler Isaac — Ingeniero Frontend & Full-Stack">
+    <meta property="og:description" content="6+ años construyendo productos digitales escalables con Angular, TypeScript y arquitecturas modernas. Abierto a nuevas oportunidades.">
+    <meta property="og:image" content="https://hassler.dev/assets/images/profile/hassler-principal.jpg">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="Hassler Isaac | Portafolio">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hassler Isaac — Ingeniero Frontend & Full-Stack">
+    <meta name="twitter:description" content="6+ años construyendo productos digitales escalables con Angular, TypeScript y arquitecturas modernas.">
+    <meta name="twitter:image" content="https://hassler.dev/assets/images/profile/hassler-principal.jpg">
+
+    <!-- ===== THEME & PWA ===== -->
+    <meta name="theme-color" content="#a855f7">
+
+    <!-- ===== PERFORMANCE: preconnect CDNs ===== -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.simpleicons.org">
+
+    <!-- ===== JSON-LD: Person + WebSite ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://hassler.dev/#person",
+          "name": "Hassler Enrique Isaac Acosta",
+          "jobTitle": "Ingeniero Frontend & Full-Stack",
+          "description": "Software Engineer con más de 6 años de experiencia en Angular, TypeScript, microfrontends y desarrollo full-stack para sectores de banca y e-commerce.",
+          "url": "https://hassler.dev/",
+          "email": "hisaaca10@gmail.com",
+          "telephone": "+573003365369",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Medellín",
+            "addressCountry": "CO"
+          },
+          "sameAs": [
+                        "https://www.linkedin.com/in/hassler-isaac-acosta-897b3015b/",
+                        "https://github.com/hasslercode",
+                        "https://www.youtube.com/@jamiadev"
+          ],
+          "knowsAbout": ["Angular", "TypeScript", "React", "Microfrontends", "Laravel", "Spring Boot", "FastAPI", "Azure DevOps", "CI/CD", "VTEX"],
+          "alumniOf": [
+            {
+              "@type": "EducationalOrganization",
+              "name": "Universidad de los Andes",
+              "description": "M.Sc. Ingeniería de Software"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "Universidad del Norte",
+              "description": "Ingeniería de Sistemas y Computación"
+            }
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "PRAGMA"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://hassler.dev/#website",
+          "url": "https://hassler.dev/",
+          "name": "Hassler Isaac | Portafolio",
+          "description": "Portafolio profesional de Hassler Isaac, Ingeniero Frontend & Full-Stack.",
+          "author": { "@id": "https://hassler.dev/#person" },
+          "inLanguage": "es"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Skip to main content (accesibilidad teclado/lectores de pantalla) -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <nav class="fixed w-full z-50 bg-nav backdrop-blur-md transition-colors duration-300" aria-label="Navegación principal">
+        <div class="max-w-[1280px] mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold tracking-tighter" aria-label="Hassler Isaac - Inicio">HASSLER <span class="text-purple-500" aria-hidden="true">&lt;DEV /&gt;</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#work" class="nav-link">Experiencia</a>
+                <a href="#expertise" class="nav-link">Stack técnico</a>
+                <a href="#personal-projects" class="nav-link">Proyectos</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="theme-toggle-btn" title="Cambiar tema" aria-label="Cambiar entre tema oscuro y claro">
+                    <div class="theme-toggle-track" aria-hidden="true">
+                        <div class="theme-toggle-thumb">
+                            <i id="theme-icon" class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                </button>
+                <a href="assets/cv/CVHassler2026.pdf" download class="border border-nav-border px-4 py-2 rounded-full text-xs hover:bg-hover-nav transition text-nav-text" aria-label="Descargar CV de Hassler Isaac en PDF">Descargar CV <i class="fas fa-download ml-2" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+    <main id="main-content">
+
+    <section id="hero" aria-label="Presentación de Hassler Isaac, Ingeniero Frontend & Full-Stack" class="relative pt-32 pb-20 px-6 min-h-screen flex items-center overflow-hidden">
+        <div class="glow-circle top-10 right-0 opacity-60" aria-hidden="true"></div>
+        <div class="max-w-screen-2xl mx-auto w-full px-4">
+
+            <!-- Fila principal: texto | imagen -->
+            <div class="grid md:grid-cols-[3fr_2fr] gap-12 items-center">
+
+                <!-- Columna izquierda -->
+                <div>
+                    <p class="text-lg font-semibold mb-5 tracking-wide">
+                        <span class="text-gray-500">Hola, soy</span> <span class="purple-gradient-text">Hassler Isaac</span> <span class="text-yellow-400">👋</span>
+                    </p>
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                        Construyo productos digitales que <span class="purple-gradient-text">mueven negocio</span>.
+                    </h1>
+                    <p class="text-gray-400 text-lg mb-8 max-w-xl">
+                        Ingeniero Frontend & Full-Stack con experiencia en banca y e-commerce. Diseño y desarrollo plataformas escalables, rápidas y mantenibles, con foco en arquitectura, calidad y resultados reales.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-10">
+                        <a href="#work" class="btn-primary px-8 py-3 rounded-lg font-semibold flex items-center">
+                            Ver experiencia <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <!-- Logos empresas -->
+                    <div>
+                        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-5">He trabajado con</p>
+                        <div class="flex flex-wrap items-end gap-x-5 gap-y-5">
+                            <!-- Bancolombia -->
+                            <div class="company-logo-item">
+                                <img src="https://www.bancolombia.com/wcm/connect/b8e4c3f2-36a9-497d-a125-ac04f83b0bf8/LogoBancolombia.png?MOD=AJPERES" alt="Bancolombia" data-fallback="Bancolombia"
+                                    class="company-logo h-7 object-contain mx-auto">
+                                <span class="company-logo-label">Bancolombia</span>
+                            </div>
+                            <!-- PRAGMA -->
+                            <div class="company-logo-item">
+                                <img src="https://resources.krowdy.com/krowdy/company/60c7d15285bef80007a3c13f/2021-06-14T17-02-27-583ZLOGOTIPO_PRAGMA_original.png" alt="PRAGMA" data-fallback="PRAGMA"
+                                    class="company-logo h-7 object-contain mx-auto">
+                                <span class="company-logo-label">PRAGMA</span>
+                            </div>
+                            <!-- VTEX -->
+                            <div class="company-logo-item">
+                                <img src="https://cdn.simpleicons.org/vtex/ffffff" alt="VTEX" data-fallback="VTEX"
+                                    class="company-logo h-6 object-contain mx-auto">
+                                <span class="company-logo-label">VTEX</span>
+                            </div>
+                            <!-- Infracommerce -->
+                            <div class="company-logo-item">
+                                <img src="https://www.brandlive.net/assets/css/images/infracommerce-latam.png" alt="Infracommerce" data-fallback="Infracommerce"
+                                    class="company-logo h-7 object-contain mx-auto">
+                                <span class="company-logo-label">Infracommerce</span>
+                            </div>
+                            <!-- PNG Technology Solutions -->
+                            <div class="company-logo-item">
+                                <img src="https://media.licdn.com/dms/image/v2/C4E0BAQHWVDYaKRTkaQ/company-logo_200_200/company-logo_200_200/0/1668545883067/png_technology_solutions_logo?e=2147483647&v=beta&t=alGpotz77TkORkNrqIR1MPrToc5hr19NlhaO8z6lNNw" alt="PNG Technology Solutions" data-fallback="PNG TECH"
+                                    class="company-logo h-7 object-contain mx-auto">
+                                <span class="company-logo-label">PNG Technology Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: foto con decoraciones -->
+                <div class="flex flex-col justify-center items-center self-stretch">
+                    <!-- Wrapper con tamaño fijo: todo se posiciona dentro de él -->
+                    <div class="relative flex items-center justify-center" style="width:24rem;height:24rem;">
+                    <!-- Glow radial detrás de la foto -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-96 h-96 rounded-full bg-purple-700/20 blur-3xl"></div>
+                    </div>
+
+                    <!-- Rings concéntricos -->
+                    <div class="hero-ring" style="width:22rem;height:22rem;" aria-hidden="true"></div>
+                    <div class="hero-ring" style="width:26rem;height:26rem;animation-delay:2s;" aria-hidden="true"></div>
+
+                    <!-- Partículas decorativas -->
+                    <span class="hero-particle" style="top:5%;left:8%;animation-delay:0s;" aria-hidden="true"></span>
+                    <span class="hero-particle" style="top:3%;right:12%;animation-delay:0.8s;width:5px;height:5px;" aria-hidden="true"></span>
+                    <span class="hero-particle" style="top:50%;right:2%;animation-delay:1.4s;" aria-hidden="true"></span>
+                    <span class="hero-particle" style="bottom:8%;left:5%;animation-delay:2s;width:5px;height:5px;" aria-hidden="true"></span>
+
+                    <!-- Foto circular -->
+                    <div class="photo-circle relative z-10 w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500/40 shadow-[0_0_60px_rgba(168,85,247,0.35)]">
+                        <img src="assets/images/profile/hassler-principal.jpg" alt="Hassler Enrique Isaac Acosta, Ingeniero Frontend & Full-Stack" class="w-full h-full object-cover" width="320" height="320">
+                    </div>
+
+                    <!-- Badge 6+ años -->
+                    <div class="years-badge absolute bottom-0 right-0 z-20 rounded-2xl px-4 py-3 flex items-center gap-3 shadow-xl">
+                        <div class="w-10 h-10 rounded-xl bg-purple-900/60 flex items-center justify-center shrink-0">
+                            <i class="fas fa-star text-purple-400 text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-purple-400 font-bold text-lg leading-none">6+ años</p>
+                            <p class="text-gray-400 text-xs mt-0.5">de experiencia</p>
+                            <p class="text-gray-500 text-xs">desde 2019</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila inferior: Formación e Idiomas (ancho completo) -->
+            <div class="grid md:grid-cols-2 gap-6 mt-12 pt-8">
+                <!-- Formación académica -->
+                <div>
+                    <p class="text-purple-300 text-xs font-bold uppercase tracking-[0.22em] mb-3">Formacion academica</p>
+                    <div class="grid sm:grid-cols-2 gap-3">
+                        <div class="card-glass rounded-xl p-4 flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-purple-900/40 flex items-center justify-center shrink-0">
+                                <i class="fas fa-graduation-cap text-purple-400 text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-semibold leading-tight">M.Sc. Ingenieria de Software</p>
+                                <p class="text-gray-400 text-xs mt-1">Universidad de los Andes</p>
+                                <p class="text-purple-400 text-xs mt-1 font-medium">2022 &ndash; 2024</p>
+                                <div class="mt-2 h-0.5 w-8 rounded-full bg-gradient-to-r from-purple-500 to-purple-800"></div>
+                            </div>
+                        </div>
+                        <div class="card-glass rounded-xl p-4 flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-purple-900/40 flex items-center justify-center shrink-0">
+                                <i class="fas fa-graduation-cap text-purple-400 text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-semibold leading-tight">Ingenieria de Sistemas y Computacion</p>
+                                <p class="text-gray-400 text-xs mt-1">Universidad del Norte</p>
+                                <p class="text-purple-400 text-xs mt-1 font-medium">2015 &ndash; 2020</p>
+                                <div class="mt-2 h-0.5 w-8 rounded-full bg-gradient-to-r from-purple-500 to-purple-800"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Idiomas -->
+                <div>
+                    <p class="text-purple-300 text-xs font-bold uppercase tracking-[0.22em] mb-3">Idiomas</p>
+                    <div class="card-glass rounded-xl p-5 space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-white text-sm font-medium flex items-center gap-2">
+                                    <i class="fas fa-comment text-purple-400 text-xs"></i> Español
+                                </span>
+                                <span class="text-gray-400 text-xs">Nativo / Bilingue</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-1.5">
+                                <div class="bg-gradient-to-r from-purple-600 to-purple-400 h-1.5 rounded-full w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-white text-sm font-medium flex items-center gap-2">
+                                    <i class="fas fa-globe text-purple-400 text-xs"></i> Ingles (B2)
+                                </span>
+                                <span class="text-gray-400 text-xs">Conversacional</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-1.5">
+                                <div class="bg-gradient-to-r from-purple-600 to-purple-400 h-1.5 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Conector: Hero → Experiencia -->
+    <div class="section-connector timeline-connector" aria-hidden="true">
+        <span class="timeline-track"></span>
+        <span class="timeline-node timeline-node-top"></span>
+        <span class="timeline-node timeline-node-mid"></span>
+        <span class="timeline-node timeline-node-bottom"></span>
+        <span class="timeline-pulse"></span>
+    </div>
+
+    <section id="work" class="py-20 px-6 max-w-7xl mx-auto" aria-labelledby="work-heading">
+        <div class="text-center mb-16">
+            <div class="flex justify-center mb-4">
+                <span class="expertise-badge">💼 EXPERIENCIA PROFESIONAL</span>
+            </div>
+            <h2 id="work-heading" class="text-3xl md:text-4xl font-bold leading-tight">Tecnología que mueve <span class="purple-gradient-text">negocios</span>.</h2>
+        </div>
+
+        <div class="space-y-20">
+            <!-- Experiencia 1 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs text-purple-400 font-mono font-bold mb-3 block tracking-wider">01 / PRAGMA - BANCOLOMBIA (2022 - ACTUALIDAD)</span>
+                    <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-5">Ingenieria <span class="purple-gradient-text">frontend de alto impacto</span> para ecosistemas financieros.</h3>
+                    <p class="text-gray-400 text-base mb-7 leading-relaxed">Lideré la construcción de soluciones modulares en Angular para canales de alto tráfico, acelerando releases y elevando la calidad técnica sin comprometer seguridad ni estabilidad.</p>
+                    <div class="grid grid-cols-2 gap-3 mb-8">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">Arquitecturas modulares en Angular</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">CI/CD con Azure DevOps</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">Calidad con SonarQube</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">Integración backend</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-purple-800/20 rounded-2xl blur-xl group-hover:blur-2xl transition duration-300"></div>
+                    <div class="relative rounded-2xl overflow-hidden border border-purple-700/30 aspect-video shadow-2xl group-hover:border-purple-500/50 transition">
+                        <img src="assets/images/projects/banca.jpg" alt="Proyecto banca" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent"></div>
+                        <span class="absolute left-4 bottom-4 text-gray-200 text-sm italic">Plataformas financieras modulares</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiencia 2 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative group order-2 md:order-1">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-purple-800/20 rounded-2xl blur-xl group-hover:blur-2xl transition duration-300"></div>
+                    <div class="relative rounded-2xl overflow-hidden border border-purple-700/30 aspect-video shadow-2xl group-hover:border-purple-500/50 transition">
+                        <img src="assets/images/projects/ecommerce.jpg" alt="Proyecto e-commerce" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent"></div>
+                        <span class="absolute left-4 bottom-4 text-gray-200 text-sm italic">Plataforma SOAT + E-commerce</span>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <span class="text-xs text-purple-400 font-mono font-bold mb-3 block tracking-wider">02 / INFRACOMMERCE LATAM (2021 - 2022)</span>
+                    <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-5">Del legacy al <span class="purple-gradient-text">e-commerce moderno</span> con foco en resultado.</h3>
+                    <p class="text-gray-400 text-base mb-7 leading-relaxed">Impulsé la modernización de plataformas comerciales con VTEX, Laravel y React, mejorando mantenibilidad, reduciendo fricción operativa y fortaleciendo prácticas de calidad y seguridad.</p>
+                    <div class="grid grid-cols-2 gap-3 mb-8">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">VTEX IO y Laravel</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">Frontend en React</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">Calidad y seguridad</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">Plataforma SOAT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiencia 3 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs text-purple-400 font-mono font-bold mb-3 block tracking-wider">03 / PNG TECHNOLOGIES (2019 - 2021)</span>
+                    <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-5">Construccion de <span class="purple-gradient-text">productos SaaS</span> con traccion real.</h3>
+                    <p class="text-gray-400 text-base mb-7 leading-relaxed">Desarrollé soluciones SaaS y e-commerce de punta a punta con Laravel/Lumen y JavaScript, incluyendo Consigueloyapp.com, plataforma que habilitó a 500+ comercios colombianos.</p>
+                    <div class="grid grid-cols-2 gap-3 mb-8">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">Laravel / Lumen</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">JavaScript</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">Arquitectura modular</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-purple-400 text-sm"></i>
+                            <span class="text-sm text-gray-300">Estabilidad releases</span>
+                        </div>
+                    </div>
+                    <a href="#" class="text-purple-400 font-bold text-sm hover:text-purple-300 transition flex items-center gap-1">
+                        Ver crecimiento <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-purple-800/20 rounded-2xl blur-xl group-hover:blur-2xl transition duration-300"></div>
+                    <div class="relative rounded-2xl overflow-hidden border border-purple-700/30 aspect-video shadow-2xl group-hover:border-purple-500/50 transition">
+                        <img src="assets/images/projects/saas-marketplace.jpg" alt="Proyecto SaaS marketplace" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent"></div>
+                        <span class="absolute left-4 bottom-4 text-gray-200 text-sm italic">Consigueloyapp.com Marketplace</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conector: Experiencia → Stack Técnico -->
+    <div class="section-connector timeline-connector" aria-hidden="true">
+        <span class="timeline-track"></span>
+        <span class="timeline-node timeline-node-top"></span>
+        <span class="timeline-node timeline-node-mid"></span>
+        <span class="timeline-node timeline-node-bottom"></span>
+        <span class="timeline-pulse"></span>
+    </div>
+
+    <section id="expertise" class="py-24 px-6" aria-labelledby="expertise-heading">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="flex justify-center mb-4">
+                    <span class="expertise-badge">📦 STACK TÉCNICO</span>
+                </div>
+                <h2 id="expertise-heading" class="text-3xl md:text-4xl font-bold leading-tight mb-4">Stack para construir desde <span class="purple-gradient-text">cero</span>.</h2>
+                <p class="text-gray-400 text-sm md:text-base mt-6 max-w-3xl mx-auto leading-relaxed">Combino experiencia en frontend, backend y prácticas de entrega continua para mover productos desde idea hasta producción con velocidad y calidad.</p>
+            </div>
+
+            <!-- Franja de tecnologías principales -->
+            <div class="tech-strip mb-14" aria-label="Tecnologías principales">
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/angular/e23237" class="w-5 h-5" alt="">Angular</span>
+                <span class="tech-strip-divider" aria-hidden="true"></span>
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/typescript/3178c6" class="w-5 h-5" alt="">TypeScript</span>
+                <span class="tech-strip-divider" aria-hidden="true"></span>
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/react/61dafb" class="w-5 h-5" alt="">React</span>
+                <span class="tech-strip-divider" aria-hidden="true"></span>
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/laravel/ff2d20" class="w-5 h-5" alt="">Laravel</span>
+                <span class="tech-strip-divider" aria-hidden="true"></span>
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/springboot/6db33f" class="w-5 h-5" alt="">Spring Boot</span>
+                <span class="tech-strip-divider" aria-hidden="true"></span>
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/fastapi/009688" class="w-5 h-5" alt="">FastAPI</span>
+                <span class="tech-strip-divider" aria-hidden="true"></span>
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/jest/c21325" class="w-5 h-5" alt="">Jest</span>
+                <span class="tech-strip-divider" aria-hidden="true"></span>
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/cypress/ffffff" class="w-5 h-5" alt="">Cypress</span>
+                <span class="tech-strip-divider" aria-hidden="true"></span>
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/playwright/2ead33" class="w-5 h-5" alt="">Playwright</span>
+                <span class="tech-strip-divider" aria-hidden="true"></span>
+                <span class="tech-strip-item"><img src="https://cdn.simpleicons.org/githubcopilot/ffffff" class="w-5 h-5" alt="">GitHub Copilot</span>
+            </div>
+
+            <!-- Paneles por dominio -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Frontend Engineering -->
+                <article class="skill-panel">
+                    <div class="skill-panel-header">
+                        <i class="fas fa-code text-purple-400"></i>
+                        <h4 class="text-white font-bold text-base">Frontend Engineering</h4>
+                    </div>
+                    <div class="skill-tag-list">
+                        <span class="skill-tag skill-tag-strong">Angular</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag skill-tag-strong">TypeScript</span>
+                        <span class="skill-tag">RxJS</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS / SASS</span>
+                        <span class="skill-tag">Microfrontends</span>
+                    </div>
+                </article>
+
+                <!-- Backend y APIs -->
+                <article class="skill-panel">
+                    <div class="skill-panel-header">
+                        <i class="fas fa-database text-purple-400"></i>
+                        <h4 class="text-white font-bold text-base">Backend y APIs</h4>
+                    </div>
+                    <div class="skill-tag-list">
+                        <span class="skill-tag skill-tag-strong">Laravel</span>
+                        <span class="skill-tag">Lumen</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">WebSockets</span>
+                    </div>
+                </article>
+
+                <!-- Calidad, Testing y DevOps -->
+                <article class="skill-panel">
+                    <div class="skill-panel-header">
+                        <i class="fas fa-infinity text-purple-400"></i>
+                        <h4 class="text-white font-bold text-base">Calidad, Testing y DevOps</h4>
+                    </div>
+                    <div class="skill-tag-list">
+                        <span class="skill-tag skill-tag-strong">CI/CD</span>
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">SonarQube</span>
+                        <span class="skill-tag">Artifactory</span>
+                        <span class="skill-tag">Jest</span>
+                        <span class="skill-tag">Cypress</span>
+                        <span class="skill-tag skill-tag-strong">Playwright</span>
+                        <span class="skill-tag">Clean Code</span>
+                    </div>
+                </article>
+
+                <!-- Productividad e IA -->
+                <article class="skill-panel">
+                    <div class="skill-panel-header">
+                        <i class="fas fa-brain text-purple-400"></i>
+                        <h4 class="text-white font-bold text-base">Productividad e IA</h4>
+                    </div>
+                    <div class="skill-tag-list">
+                        <span class="skill-tag skill-tag-strong">GitHub Copilot</span>
+                        <span class="skill-tag">Prompt-based Dev</span>
+                        <span class="skill-tag">Arquitectura modular</span>
+                        <span class="skill-tag">DX First</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conector: Stack Técnico → Proyectos -->
+    <div class="section-connector timeline-connector" aria-hidden="true">
+        <span class="timeline-track"></span>
+        <span class="timeline-node timeline-node-top"></span>
+        <span class="timeline-node timeline-node-mid"></span>
+        <span class="timeline-node timeline-node-bottom"></span>
+        <span class="timeline-pulse"></span>
+    </div>
+
+    <section id="personal-projects" class="py-20 px-6 max-w-7xl mx-auto" aria-labelledby="projects-heading">
+        <div class="text-center mb-16">
+            <div class="flex justify-center mb-4">
+                <span class="expertise-badge">✦ PROYECTOS PERSONALES</span>
+            </div>
+            <h2 id="projects-heading" class="text-3xl md:text-4xl font-bold leading-tight">Experimentos con <span class="purple-gradient-text">propósito real</span>.</h2>
+            <p class="text-gray-400 text-sm md:text-base mt-6 max-w-3xl mx-auto leading-relaxed">Herramientas pensadas para resolver problemas cotidianos, explorar ideas de producto y probar arquitecturas modernas end-to-end.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <!-- Proyecto 1: Calculadora -->
+            <article class="project-card rounded-2xl p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <span class="project-badge text-xs">WEB APP</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3"><span class="purple-gradient-text">NestEgg</span> — Calculadora de maternidad</h3>
+                <p class="text-gray-300 text-sm mb-6 leading-relaxed">Herramienta para estimar y organizar gastos por etapas del embarazo, con enfoque práctico para la planificación familiar y toma de decisiones financieras.</p>
+                <a href="https://hasslercode.github.io/life-tools-app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-purple-400 font-bold text-sm hover:text-purple-300 transition">
+                    Abrir proyecto <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+                </a>
+            </article>
+
+            <!-- Proyecto 2: Comparador -->
+            <article class="project-card rounded-2xl p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white text-2xl">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <span class="project-badge text-xs">COMPARADOR</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3"><span class="purple-gradient-text">PerksRadar</span> — Tu brújula de beneficios</h3>
+                <p class="text-gray-300 text-sm mb-6 leading-relaxed">Comparador que consolida beneficios por categoría para facilitar decisiones de ahorro en consumo diario y compras planificadas.</p>
+                <p class="text-gray-400 text-xs flex items-start gap-2 mb-6">
+                    <i class="fas fa-check text-purple-400 mt-1 shrink-0"></i>
+                    <span>Incluye categorías como franquicias, bancos y comercios (ej: restaurantes y otros rubros frecuentes).</span>
+                </p>
+                <span class="inline-flex items-center text-amber-300 font-bold text-sm">
+                    En desarrollo <i class="fas fa-tools ml-2" aria-hidden="true"></i>
+                </span>
+            </article>
+
+            <!-- Proyecto 3: TikTok Overlays (full width) -->
+            <article class="project-card rounded-2xl p-8 md:col-span-2">
+                <div class="flex flex-col md:flex-row items-start justify-between gap-6">
+                    <div class="flex-1">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white text-2xl shrink-0">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div>
+                                <span class="project-badge text-xs mb-2 block">LIVE TOOLS</span>
+                                <p class="text-xs text-gray-400">FastAPI + WebSockets + Angular</p>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3"><span class="purple-gradient-text">LiveCanvas</span> — Studio para creators en vivo</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">Sistema de overlays en tiempo real para transmisiones en vivo, con backend en FastAPI, comunicación por sockets y frontend en Angular para personalización visual dinámica.</p>
+                        <span class="inline-flex items-center text-amber-300 font-bold text-sm">
+                            En desarrollo <i class="fas fa-tools ml-2" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="hidden md:flex items-center justify-center w-64 h-48 rounded-xl bg-gradient-to-br from-purple-900/40 to-purple-800/20 border border-purple-700/30 p-6">
+                        <svg viewBox="0 0 200 200" class="w-full h-full text-purple-400 opacity-80">
+                            <circle cx="100" cy="60" r="12" fill="currentColor" opacity="0.8"/>
+                            <line x1="100" y1="72" x2="100" y2="130" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                            <circle cx="70" cy="140" r="10" fill="currentColor" opacity="0.6"/>
+                            <circle cx="100" cy="150" r="10" fill="currentColor" opacity="0.6"/>
+                            <circle cx="130" cy="140" r="10" fill="currentColor" opacity="0.6"/>
+                            <path d="M 60 100 Q 100 80 140 100" stroke="currentColor" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="5,5"/>
+                        </svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Mensaje final -->
+        <div class="flex justify-center">
+            <span class="inline-flex items-center gap-2 text-xs text-purple-400 border border-purple-700/50 rounded-full px-5 py-3 bg-purple-900/20">
+                <i class="fas fa-rocket text-sm"></i>
+                Proyectos en evolución continua
+            </span>
+        </div>
+    </section>
+
+    <!-- Conector: Stack Técnico → Presencia Digital -->
+    <div class="section-connector timeline-connector" aria-hidden="true">
+        <span class="timeline-track"></span>
+        <span class="timeline-node timeline-node-top"></span>
+        <span class="timeline-node timeline-node-mid"></span>
+        <span class="timeline-node timeline-node-bottom"></span>
+        <span class="timeline-pulse"></span>
+    </div>
+
+    <section id="social-hub" class="social-hub py-20 px-6" aria-labelledby="social-hub-heading">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <span class="expertise-badge">🔗 PRESENCIA DIGITAL</span>
+                <h2 id="social-hub-heading" class="text-3xl md:text-4xl font-bold leading-tight mt-5">Conectemos en mis canales <span class="purple-gradient-text">clave</span>.</h2>
+                <p class="text-gray-400 text-sm md:text-base mt-5 max-w-2xl mx-auto leading-relaxed">Este es mi hub principal para networking profesional, código, contenido y contacto directo.</p>
+            </div>
+
+            <div class="social-hub-grid">
+                <a href="https://www.linkedin.com/in/hassler-isaac-acosta-897b3015b/" target="_blank" rel="noopener noreferrer" class="social-spot social-linkedin" aria-label="Ir a LinkedIn de Hassler Isaac">
+                    <div class="social-spot-icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></div>
+                    <h3>LinkedIn</h3>
+                    <p>Mi perfil profesional, experiencia y publicaciones.</p>
+                    <span class="social-spot-cta">Ver perfil</span>
+                </a>
+
+                <a href="https://github.com/hasslercode" target="_blank" rel="noopener noreferrer" class="social-spot social-github" aria-label="Ir a GitHub de Hassler Isaac">
+                    <div class="social-spot-icon"><i class="fab fa-github" aria-hidden="true"></i></div>
+                    <h3>GitHub</h3>
+                    <p>Repositorios, proyectos y experimentos técnicos.</p>
+                    <span class="social-spot-cta">Ver código</span>
+                </a>
+
+                <a href="mailto:hisaaca10@gmail.com" class="social-spot social-email" aria-label="Enviar un correo a Hassler Isaac">
+                    <div class="social-spot-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                    <h3>Email</h3>
+                    <p>Canal directo para oportunidades y propuestas.</p>
+                    <span class="social-spot-cta">Escribir ahora</span>
+                </a>
+
+                <a href="https://www.youtube.com/@jamiadev" target="_blank" rel="noopener noreferrer" class="social-spot social-youtube" aria-label="Ir al canal de YouTube de Hassler Isaac">
+                    <div class="social-spot-icon"><i class="fab fa-youtube" aria-hidden="true"></i></div>
+                    <h3>YouTube</h3>
+                    <p>Contenido de desarrollo, IA aplicada y productividad.</p>
+                    <span class="social-spot-cta">Ver canal</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer id="contact" class="py-12 px-6 border-t border-white/5" aria-label="Contacto y redes sociales">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0">
+                <h2 class="text-3xl font-bold mb-4">Construyamos algo <br>grande <span class="text-purple-500">juntos.</span></h2>
+                <address class="not-italic text-gray-500 text-sm">Medellín, Colombia &middot; <a href="mailto:hisaaca10@gmail.com" class="hover:text-purple-400 transition">hisaaca10@gmail.com</a> &middot; <a href="tel:+573003365369" class="hover:text-purple-400 transition">+57 300 336 5369</a></address>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="mailto:hisaaca10@gmail.com" class="btn-primary px-8 py-3 rounded-lg font-semibold" aria-label="Enviar correo a Hassler Isaac">Contáctame <i class="fas fa-paper-plane ml-2" aria-hidden="true"></i></a>
+                <nav aria-label="Redes sociales">
+                    <ul class="flex space-x-4 text-xl list-none">
+                        <li><a href="https://www.linkedin.com/in/hassler-isaac-acosta-897b3015b/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition" aria-label="Ver perfil de LinkedIn de Hassler Isaac"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/hasslercode" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition" aria-label="Ver perfil de GitHub de Hassler Isaac"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.youtube.com/@jamiadev" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition" aria-label="Ver canal de YouTube de Hassler Isaac"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="mailto:hisaaca10@gmail.com" class="text-gray-400 hover:text-white transition" aria-label="Enviar email a Hassler Isaac"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    </div><!-- /page-wrapper -->
+
+    <a
+        href="https://www.linkedin.com/in/hassler-isaac-acosta-897b3015b/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="floating-contact-btn"
+        aria-label="Contáctame por LinkedIn"
+        title="Contáctame en LinkedIn"
+    >
+        <span class="floating-contact-svg" aria-hidden="true">
+            <svg viewBox="0 0 220 92" focusable="false">
+                <defs>
+                    <linearGradient id="floatBtnWave" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.35)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                    </linearGradient>
+                </defs>
+                <path d="M0,56 C42,16 88,16 130,54 C162,82 190,80 220,58" stroke="url(#floatBtnWave)" stroke-width="3" fill="none" />
+                <circle cx="42" cy="30" r="4" fill="rgba(255,255,255,0.45)" />
+                <circle cx="186" cy="42" r="3" fill="rgba(255,255,255,0.35)" />
+            </svg>
+        </span>
+        <span class="floating-contact-icon" aria-hidden="true">
+            <i class="fab fa-linkedin-in"></i>
+        </span>
+        <span class="floating-contact-text">
+            <strong>Contáctame</strong>
+            <small>LinkedIn Directo</small>
+        </span>
+        <span class="floating-contact-pulse" aria-hidden="true"></span>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
