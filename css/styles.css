@@ -1054,6 +1054,52 @@ html[data-theme="light"] .theme-toggle-thumb {
 
 /* ===== ACCESIBILIDAD ===== */
 
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+    background: var(--bg-nav, rgba(10,10,14,0.97));
+    backdrop-filter: blur(12px);
+}
+
+[data-theme="light"] .mobile-menu {
+    background: rgba(255,255,255,0.97);
+}
+
+/* Hamburger button color */
+#mobile-menu-btn {
+    color: var(--text-nav, #e5e7eb);
+}
+
+/* ===== RESPONSIVE GLOBAL ===== */
+@media (max-width: 767px) {
+    /* Hero: foto más pequeña, sin rings sobredimensionados */
+    .hero-ring { display: none; }
+
+    /* Secciones con padding reducido */
+    section { padding-left: 1rem; padding-right: 1rem; }
+
+    /* Experiencia y proyectos: texto */
+    .work-card, .project-card { padding: 1.25rem; }
+
+    /* Social hub: 1 columna */
+    .social-hub-grid { grid-template-columns: 1fr !important; }
+
+    /* Tech strip: wrap más compacto */
+    .tech-strip { gap: 0; row-gap: 0.35rem; }
+    .tech-strip-divider { display: none; }
+    .tech-strip-item { font-size: 0.78rem; padding: 0.2rem 0.5rem; }
+
+    /* Floating button más pequeño */
+    .floating-contact-btn { padding: 0.6rem 1rem; gap: 0.5rem; }
+    .floating-contact-text strong { font-size: 0.8rem; }
+    .floating-contact-text small  { display: none; }
+
+    /* Ocultar partículas en mobile para reducir distracción */
+    .hero-particle { display: none; }
+
+    /* Formación: 1 columna */
+    .grid.sm\:grid-cols-2 { grid-template-columns: 1fr; }
+}
+
 /* Skip link: visible solo al recibir foco (teclado / lectores de pantalla) */
 .skip-link {
     position: absolute;

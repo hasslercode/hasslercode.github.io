@@ -121,33 +121,47 @@
                         </div>
                     </div>
                 </button>
-                <a href="assets/cv/CVHassler2026.pdf" download class="border border-nav-border px-4 py-2 rounded-full text-xs hover:bg-hover-nav transition text-nav-text" aria-label="Descargar CV de Hassler Isaac en PDF">Descargar CV <i class="fas fa-download ml-2" aria-hidden="true"></i></a>
+                <a href="assets/cv/CVHassler2026.pdf" download class="hidden sm:inline-flex border border-nav-border px-4 py-2 rounded-full text-xs hover:bg-hover-nav transition text-nav-text" aria-label="Descargar CV de Hassler Isaac en PDF">Descargar CV <i class="fas fa-download ml-2" aria-hidden="true"></i></a>
+                <!-- Hamburger -->
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="hamburger-bar block w-6 h-0.5 bg-current transition-all duration-300"></span>
+                    <span class="hamburger-bar block w-6 h-0.5 bg-current transition-all duration-300"></span>
+                    <span class="hamburger-bar block w-4 h-0.5 bg-current transition-all duration-300"></span>
+                </button>
             </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 text-sm font-medium border-t border-white/5">
+            <a href="#work" class="nav-link mobile-nav-link">Experiencia</a>
+            <a href="#expertise" class="nav-link mobile-nav-link">Stack técnico</a>
+            <a href="#personal-projects" class="nav-link mobile-nav-link">Proyectos</a>
+            <a href="#contact" class="nav-link mobile-nav-link">Contacto</a>
+            <a href="assets/cv/CVHassler2026.pdf" download class="border border-nav-border px-4 py-2 rounded-full text-xs text-center hover:bg-hover-nav transition text-nav-text w-full">Descargar CV <i class="fas fa-download ml-2" aria-hidden="true"></i></a>
         </div>
     </nav>
 
     <div class="page-wrapper">
     <main id="main-content">
 
-    <section id="hero" aria-label="Presentación de Hassler Isaac, Ingeniero Frontend & Full-Stack" class="relative pt-32 pb-20 px-6 min-h-screen flex items-center overflow-hidden">
+    <section id="hero" aria-label="Presentación de Hassler Isaac, Ingeniero Frontend & Full-Stack" class="relative pt-24 pb-14 px-4 md:px-6 min-h-screen flex items-center overflow-hidden">
         <div class="glow-circle top-10 right-0 opacity-60" aria-hidden="true"></div>
-        <div class="max-w-screen-2xl mx-auto w-full px-4">
+        <div class="max-w-screen-2xl mx-auto w-full">
 
             <!-- Fila principal: texto | imagen -->
-            <div class="grid md:grid-cols-[3fr_2fr] gap-12 items-center">
+            <div class="flex flex-col-reverse md:grid md:grid-cols-[3fr_2fr] gap-8 md:gap-12 items-center">
 
                 <!-- Columna izquierda -->
-                <div>
+                <div class="w-full">
                     <p class="text-lg font-semibold mb-5 tracking-wide">
                         <span class="text-gray-500">Hola, soy</span> <span class="purple-gradient-text">Hassler Isaac</span> <span class="text-yellow-400">👋</span>
                     </p>
-                    <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight mb-5">
                         Construyo productos digitales que <span class="purple-gradient-text">mueven negocio</span>.
                     </h1>
-                    <p class="text-gray-400 text-lg mb-8 max-w-xl">
+                    <p class="text-gray-400 text-sm md:text-lg mb-7 max-w-xl">
                         Ingeniero Frontend & Full-Stack con experiencia en banca y e-commerce. Diseño y desarrollo plataformas escalables, rápidas y mantenibles, con foco en arquitectura, calidad y resultados reales.
                     </p>
-                    <div class="flex flex-wrap gap-4 mb-10">
+                    <div class="flex flex-wrap gap-4 mb-8">
                         <a href="#work" class="btn-primary px-8 py-3 rounded-lg font-semibold flex items-center">
                             Ver experiencia <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
                         </a>
@@ -155,8 +169,8 @@
 
                     <!-- Logos empresas -->
                     <div>
-                        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-5">He trabajado con</p>
-                        <div class="flex flex-wrap items-end gap-x-5 gap-y-5">
+                        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] mb-4">He trabajado con</p>
+                        <div class="flex flex-wrap items-end gap-x-4 gap-y-4">
                             <!-- Bancolombia -->
                             <div class="company-logo-item">
                                 <img src="https://www.bancolombia.com/wcm/connect/b8e4c3f2-36a9-497d-a125-ac04f83b0bf8/LogoBancolombia.png?MOD=AJPERES" alt="Bancolombia" data-fallback="Bancolombia"
@@ -192,9 +206,9 @@
                 </div>
 
                 <!-- Columna derecha: foto con decoraciones -->
-                <div class="flex flex-col justify-center items-center self-stretch">
+                <div class="flex flex-col justify-center items-center mt-4 md:mt-0 md:self-stretch">
                     <!-- Wrapper con tamaño fijo: todo se posiciona dentro de él -->
-                    <div class="relative flex items-center justify-center" style="width:24rem;height:24rem;">
+                    <div class="relative flex items-center justify-center w-52 h-52 sm:w-72 sm:h-72 md:w-96 md:h-96">
                     <!-- Glow radial detrás de la foto -->
                     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                         <div class="w-96 h-96 rounded-full bg-purple-700/20 blur-3xl"></div>

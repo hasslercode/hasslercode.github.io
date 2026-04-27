@@ -3,10 +3,9 @@ const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 const htmlElement = document.documentElement;
 
-// Detectar preferencia guardada o del sistema
+// Detectar preferencia guardada — dark por defecto
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme') || 
-                      (globalThis.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
 }
 
@@ -33,6 +32,41 @@ themeToggle.addEventListener('click', () => {
 
 // Inicializar tema al cargar
 initTheme();
+
+// ===== MOBILE MENU =====
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
+    const bars = mobileMenuBtn.querySelectorAll('.hamburger-bar');
+    if (!isOpen) {
+        bars[0].style.transform = 'translateY(8px) rotate(45deg)';
+        bars[1].style.opacity = '0';
+        bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+        bars[2].style.width = '1.5rem';
+    } else {
+        bars[0].style.transform = '';
+        bars[1].style.opacity = '';
+        bars[2].style.transform = '';
+        bars[2].style.width = '';
+    }
+});
+
+// Cerrar menú al clicar un enlace
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        const bars = mobileMenuBtn.querySelectorAll('.hamburger-bar');
+        bars[0].style.transform = '';
+        bars[1].style.opacity = '';
+        bars[2].style.transform = '';
+        bars[2].style.width = '';
+    });
+});
 
 // ===== SCROLL ANIMATIONS =====
 const observerOptions = { 
