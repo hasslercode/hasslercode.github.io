@@ -33,6 +33,7 @@ export function Projects() {
             key={project.id}
             project={project}
             ownedMark={ownedMark}
+            variant="teaser"
           />
         ))}
       </div>

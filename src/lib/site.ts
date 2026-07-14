@@ -21,7 +21,9 @@ export const siteConfig = {
 } as const;
 
 export const tools = [
-  { name: "Angular", slug: "angular", color: "DD0031" },
+  { name: "React", slug: "react", color: "61DAFB", featured: true },
+  { name: "Next.js", slug: "nextdotjs", color: "000000", featured: true },
+  { name: "Angular", slug: "angular", color: "DD0031", featured: true },
   { name: "TypeScript", slug: "typescript", color: "3178C6" },
   { name: "RxJS", slug: "reactivex", color: "B7178C" },
   { name: "Node.js", slug: "nodedotjs", color: "339933" },

@@ -103,12 +103,12 @@
       "metaTitle": "Projects | Landings, products & builds — Hassler Isaac",
       "metaDescription": "Client landings, owned products, and in-progress builds — clear web design and development focused on conversion and craft.",
       "label": "// PROJECTS",
-      "title": "Live work, owned products, and builds in progress",
-      "lead": "Client landings, owned products, and active experiments — all with the same bar: clear, fast, and with personality.",
+      "title": "Landings, products, and work in progress",
+      "lead": "Client sites, owned products, and active experiments — same bar: clear, fast, and with personality.",
       "backHome": "BACK TO HOME",
       "groups": {
-        "client": "// CLIENT LANDINGS",
-        "own": "// OWNED PRODUCTS",
+        "client": "// CLIENTS",
+        "own": "// OWN",
         "inProgress": "// IN PROGRESS"
       }
     },
@@ -231,6 +231,7 @@
     "cta": "LET'S START",
     "seeWork": "SEE WORK",
     "visualCaption": "From landing pages to full products",
+    "visualAlt": "Visual collage of a landing page, ecommerce store, and software platform",
     "pillarsLabel": "What I can build",
     "pillars": [
       {
@@ -298,6 +299,8 @@
       "Frontend and backend",
       "Web design Colombia",
       "Angular",
+      "React",
+      "Next.js",
       "TypeScript"
     ],
     "serviceName": "Web, ecommerce & software development in Medellín & Barranquilla",

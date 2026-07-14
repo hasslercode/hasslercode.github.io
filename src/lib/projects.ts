@@ -36,7 +36,7 @@ export const PROJECT_META: ProjectMeta[] = [
     image: "/images/projects/paola-hoyos.png",
     group: "client",
     featured: true,
-    tone: "warm-ember",
+    tone: "warm-burgundy",
   },
   {
     id: "col-freight",
@@ -50,7 +50,7 @@ export const PROJECT_META: ProjectMeta[] = [
     image: "/images/projects/planeatubebe.png",
     group: "own",
     featured: true,
-    tone: "soft-rose",
+    tone: "mint-glow",
   },
   {
     id: "perksradar",

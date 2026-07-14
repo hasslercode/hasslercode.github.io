@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useContact } from "./ContactProvider";
@@ -35,14 +36,17 @@ export function ServicesPageContent() {
             </div>
           </div>
 
-          <aside className="services-hero-visual" aria-label={t("pillarsLabel")}>
-            <div className="services-hero-offers">
-              {pillars.map((pillar) => (
-                <div className="services-hero-offer" key={pillar.title}>
-                  <p className="mono-label">{pillar.tag}</p>
-                  <p className="services-hero-offer-title">{pillar.title}</p>
-                </div>
-              ))}
+          <aside className="services-hero-visual">
+            <div className="services-hero-media">
+              <Image
+                src="/images/showcase/services-wow.png"
+                alt={t("visualAlt")}
+                width={1600}
+                height={900}
+                className="services-hero-image"
+                sizes="(max-width: 900px) 100vw, 48vw"
+                priority
+              />
             </div>
             <p className="services-hero-caption">{t("visualCaption")}</p>
           </aside>

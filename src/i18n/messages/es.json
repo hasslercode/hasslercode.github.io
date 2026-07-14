@@ -103,12 +103,12 @@
       "metaTitle": "Proyectos | Landings, productos y builds — Hassler Isaac",
       "metaDescription": "Landings de clientes, productos propios y proyectos en progreso: diseño y desarrollo web con identidad clara y foco en conversión.",
       "label": "// PROYECTOS",
-      "title": "Trabajo en vivo, productos y builds en progreso",
-      "lead": "Landings de clientes, productos propios y experimentos activos. Todo con el mismo estándar: claro, rápido y con personalidad.",
+      "title": "Landings, productos y lo que está en marcha",
+      "lead": "Clientes, productos propios y experimentos activos — mismo estándar: claro, rápido y con personalidad.",
       "backHome": "VOLVER AL INICIO",
       "groups": {
-        "client": "// LANDINGS DE CLIENTES",
-        "own": "// PRODUCTOS PROPIOS",
+        "client": "// CLIENTES",
+        "own": "// PROPIOS",
         "inProgress": "// EN PROGRESO"
       }
     },
@@ -231,6 +231,7 @@
     "cta": "EMPECEMOS",
     "seeWork": "VER TRABAJO",
     "visualCaption": "De la landing al producto completo",
+    "visualAlt": "Collage visual de landing, ecommerce y plataforma de software",
     "pillarsLabel": "Qué puedo hacer",
     "pillars": [
       {
@@ -298,6 +299,8 @@
       "Frontend y backend",
       "Diseño web Colombia",
       "Angular",
+      "React",
+      "Next.js",
       "TypeScript"
     ],
     "serviceName": "Desarrollo web, ecommerce y software en Medellín y Barranquilla",

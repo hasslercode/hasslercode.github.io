@@ -4,10 +4,21 @@ import type { ProjectItem } from "@/lib/projects";
 type ProjectCardProps = {
   project: ProjectItem;
   ownedMark: string;
+  /** compact legacy; teaser = home columns + mystery cover; gallery = /projects */
+  variant?: "default" | "compact" | "teaser" | "gallery";
 };
 
-export function ProjectCard({ project, ownedMark }: ProjectCardProps) {
+export function ProjectCard({
+  project,
+  ownedMark,
+  variant = "default",
+}: ProjectCardProps) {
   const isOwned = Boolean(project.owned);
+  const isCompact = variant === "compact";
+  const isTeaser = variant === "teaser";
+  const isGallery = variant === "gallery";
+  const mysteryCover = isTeaser || isCompact;
+
   const content = (
     <>
       {isOwned ? (
@@ -21,9 +32,23 @@ export function ProjectCard({ project, ownedMark }: ProjectCardProps) {
           src={project.image}
           alt=""
           fill
-          sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          sizes={
+            isCompact
+              ? "(max-width: 700px) 96px, 112px"
+              : isTeaser
+                ? "(max-width: 700px) 50vw, 280px"
+                : isGallery
+                  ? "(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 25vw"
+                  : "(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          }
           className="project-cover-image"
         />
+        {mysteryCover ? <span className="project-cover-veil" /> : null}
+        {isTeaser ? (
+          <span className="project-cover-hint">
+            <i className="fas fa-arrow-up-right-from-square" />
+          </span>
+        ) : null}
       </div>
 
       <div className="project-body">
@@ -53,7 +78,17 @@ export function ProjectCard({ project, ownedMark }: ProjectCardProps) {
     </>
   );
 
-  const className = `project project-link${isOwned ? " project-owned" : ""}`;
+  const className = [
+    "project",
+    "project-link",
+    isOwned ? "project-owned" : "",
+    isCompact ? "project-compact" : "",
+    isTeaser ? "project-teaser" : "",
+    isGallery ? "project-gallery" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   const ariaLabel = isOwned ? `${project.name} (${ownedMark})` : project.name;
 
   if (project.external && project.href !== "#") {
@@ -71,7 +106,18 @@ export function ProjectCard({ project, ownedMark }: ProjectCardProps) {
   }
 
   return (
-    <article className={`project${isOwned ? " project-owned" : ""}`} aria-label={ariaLabel}>
+    <article
+      className={[
+        "project",
+        isOwned ? "project-owned" : "",
+        isCompact ? "project-compact" : "",
+        isTeaser ? "project-teaser" : "",
+        isGallery ? "project-gallery" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+      aria-label={ariaLabel}
+    >
       {content}
     </article>
   );

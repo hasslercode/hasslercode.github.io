@@ -74,7 +74,7 @@ export async function generateMetadata({
       shortcut: ["/brand/hassler-logo.png"],
     },
     other: {
-      "theme-color": "#0d9f6e",
+      "theme-color": "#0a7a55",
       "geo.region": "CO-ANT",
       "geo.placename": "Medellín, Barranquilla",
       "geo.position": "6.2442;-75.5812",
