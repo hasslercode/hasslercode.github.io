@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LocaleSwitcher } from "./LocaleSwitcher";
@@ -13,31 +13,14 @@ export function Header() {
   const pathname = usePathname();
   const { openContact } = useContact();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("top");
 
-  const isHome = pathname === "/";
-  const isBlogs = pathname.startsWith("/blogs");
-  const isServices = pathname.startsWith("/services");
-  const isProjects = pathname.startsWith("/projects");
-
-  useEffect(() => {
-    if (!isHome) return;
-
-    function onScroll() {
-      let current = "top";
-      if (window.scrollY > 80) {
-        const projects = document.getElementById("projects");
-        if (projects && projects.getBoundingClientRect().top <= 140) {
-          current = "projects";
-        }
-      }
-      setActiveSection(current);
-    }
-
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [isHome]);
+  const active = pathname.startsWith("/projects")
+    ? "projects"
+    : pathname.startsWith("/services")
+      ? "services"
+      : pathname.startsWith("/blogs")
+        ? "blogs"
+        : "top";
 
   function closeMenu() {
     setMenuOpen(false);
@@ -47,16 +30,6 @@ export function Header() {
     closeMenu();
     openContact();
   }
-
-  const active = isProjects
-    ? "projects"
-    : isServices
-      ? "services"
-      : isBlogs
-        ? "blogs"
-        : isHome
-          ? activeSection
-          : "top";
 
   const links = [
     {

@@ -32,3 +32,4 @@ dist/
 temp/
 .audit-loop/
 .cursor/
+.vercel

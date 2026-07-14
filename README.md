@@ -4,9 +4,9 @@ Portafolio personal en **Next.js 15** + **next-intl** (ES / EN), diseño bento.
 
 ## Stack
 
-- Next.js App Router (static export)
+- Next.js 15 App Router
 - TypeScript
-- next-intl (locales `/es` y `/en`)
+- next-intl (locales `/es` y `/en` + middleware)
 - CSS propio (bento + light/dark)
 
 ## Desarrollo
@@ -37,23 +37,15 @@ Abre [http://localhost:3000](http://localhost:3000). La raíz redirige a `/es` (
 - Estilos: `src/app/globals.css`
 - Componentes: `src/components/`
 
-## Deploy (GitHub Pages)
+## Deploy
 
-El sitio es un user Pages repo (`hasslercode.github.io`), servido en la raíz:
-
-**https://hasslercode.github.io/**
-
-Build estático (`output: "export"`) vía GitHub Actions (`.github/workflows/deploy-pages.yml`).
+Producción en **Vercel**: [https://portafolio-hass.vercel.app](https://portafolio-hass.vercel.app)
 
 ```bash
-npm run build   # genera out/
+vercel --prod
 ```
 
-Notas para static export:
-
-- Sin middleware (incompatible con export estático)
-- `images.unoptimized: true`
-- `trailingSlash: true` (rutas amigables en Pages)
+`https://hasslercode.github.io` no se puede apuntar por DNS a Vercel (GitHub controla `*.github.io`). El workflow `pages-redirect.yml` redirige ese dominio a Vercel.
 
 ## Assets
 

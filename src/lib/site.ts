@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Hassler Isaac",
   fullName: "Hassler Enrique Isaac Acosta",
-  url: "https://hasslercode.github.io",
+  url: "https://portafolio-hass.vercel.app",
   email: "hisaaca10@gmail.com",
   phone: "+573003365369",
   location: {

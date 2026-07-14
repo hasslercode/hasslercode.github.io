@@ -1,25 +1,11 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Outfit, IBM_Plex_Mono } from "next/font/google";
 import type { Metadata } from "next";
 import { routing, type Locale } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
-import "../globals.css";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-plex-mono",
-  display: "swap",
-});
+import { LocaleHtmlLang } from "@/components/LocaleHtmlLang";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -114,36 +100,22 @@ export default async function LocaleLayout({
   const tServices = await getTranslations({ locale, namespace: "services" });
 
   return (
-    <html lang={locale} className={`${outfit.variable} ${plexMono.variable}`}>
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
-        <JsonLd
-          locale={locale}
-          copy={{
-            jobTitle: tJson("jobTitle"),
-            description: tJson("description"),
-            knowsAbout: tJson.raw("knowsAbout") as string[],
-            serviceName: tJson("serviceName"),
-            serviceDescription: tJson("serviceDescription"),
-            serviceTypes: tJson.raw("serviceTypes") as string[],
-            offerNames: tJson.raw("offerNames") as string[],
-            faqs: tServices.raw("faqs") as Array<{ q: string; a: string }>,
-          }}
-        />
-      </head>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.dataset.theme='dark';}catch(e){}})();`,
-          }}
-        />
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <LocaleHtmlLang locale={locale} />
+      <JsonLd
+        locale={locale}
+        copy={{
+          jobTitle: tJson("jobTitle"),
+          description: tJson("description"),
+          knowsAbout: tJson.raw("knowsAbout") as string[],
+          serviceName: tJson("serviceName"),
+          serviceDescription: tJson("serviceDescription"),
+          serviceTypes: tJson.raw("serviceTypes") as string[],
+          offerNames: tJson.raw("offerNames") as string[],
+          faqs: tServices.raw("faqs") as Array<{ q: string; a: string }>,
+        }}
+      />
+      {children}
+    </NextIntlClientProvider>
   );
 }
