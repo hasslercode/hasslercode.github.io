@@ -1,0 +1,318 @@
+{
+  "meta": {
+    "title": "Landing pages in Medellín & Barranquilla | Hassler Isaac",
+    "description": "I design and build landing pages with real identity in Medellín and Barranquilla — for professionals, businesses, and brands that want to look sharp and convert better.",
+    "keywords": "landing pages Medellín, landing pages Barranquilla, landing page design Colombia, professional website Medellín, business landing page Colombia, web designer Medellín, web developer Barranquilla, freelance web Colombia"
+  },
+  "a11y": {
+    "primaryNav": "Primary",
+    "socialNav": "Social",
+    "home": "Hassler Isaac — Home",
+    "downloadCv": "Download CV",
+    "toggleTheme": "Toggle dark mode",
+    "openMenu": "Open menu",
+    "switchToEn": "Switch to English",
+    "switchToEs": "Switch to Spanish"
+  },
+  "nav": {
+    "home": "HOME",
+    "projects": "PROJECTS",
+    "services": "SERVICES",
+    "blogs": "BLOGS",
+    "contact": "CONTACT",
+    "cv": "CV",
+    "downloadCv": "DOWNLOAD CV"
+  },
+  "brand": {
+    "tagline": "// ENGINEER. BUILDER. CURIOUS MIND."
+  },
+  "blogs": {
+    "metaTitle": "Blog — Hassler Isaac | Frontend, landing pages & product",
+    "metaDescription": "Notes on frontend engineering, landing pages, digital products, and continuous learning. New posts coming soon.",
+    "label": "// BLOG",
+    "title": "Ideas, builds & notes",
+    "lead": "I'll share engineering learnings, landings, and product thinking here. No posts published yet.",
+    "emptyTitle": "No posts yet",
+    "emptyBody": "I'm preparing the first notes. In the meantime, check my landings or reach out if you want to talk about a project.",
+    "backHome": "BACK TO HOME"
+  },
+  "hero": {
+    "label": "// 01. HELLO",
+    "title": "Hi, I'm Hassler",
+    "leadBefore": "I build products, explore ideas, and turn complex problems into",
+    "leadAccent": "simple solutions.",
+    "bio": "Frontend & Full-Stack engineer in Medellín and Barranquilla. I design landings and digital products with real identity — clear, fast, and built so your work stands out, whatever your profession.",
+    "connect": "LET'S CONNECT",
+    "downloadCv": "DOWNLOAD CV",
+    "available": "AVAILABLE FOR COLLABS",
+    "location": "Medellín · Barranquilla, Colombia 🇨🇴",
+    "photoAlt": "Hassler Isaac, landing page designer in Medellín and Barranquilla"
+  },
+  "status": {
+    "label": "// STATUS",
+    "items": [
+      {
+        "text": "Frontend Engineer at Pragma",
+        "tag": "ACTIVE",
+        "icon": "briefcase"
+      },
+      {
+        "text": "Building side projects on the side",
+        "tag": "ALWAYS",
+        "icon": "flask"
+      },
+      {
+        "text": "Learning & exploring every day",
+        "tag": "FOREVER",
+        "icon": "book"
+      }
+    ]
+  },
+  "toolbox": {
+    "label": "// TOOLBOX",
+    "more": "More"
+  },
+  "experience": {
+    "label": "// EXPERIENCE",
+    "items": [
+      {
+        "company": "Pragma · Bancolombia",
+        "role": "Frontend Engineer",
+        "period": "2022 — Present",
+        "detail": "Modular Angular architectures for high-traffic banking channels."
+      },
+      {
+        "company": "Infracommerce Latam",
+        "role": "Full-Stack / E-commerce",
+        "period": "2021 — 2022",
+        "detail": "Modernized commercial platforms with VTEX, Laravel, and React."
+      },
+      {
+        "company": "PNG Technology Solutions",
+        "role": "Software Engineer",
+        "period": "2019 — 2021",
+        "detail": "End-to-end SaaS and e-commerce products (Laravel / JavaScript)."
+      }
+    ]
+  },
+  "projects": {
+    "label": "// LANDINGS & PRODUCTS",
+    "viewAll": "VIEW ALL PROJECTS",
+    "ownedMark": "OWN",
+    "page": {
+      "metaTitle": "Projects | Landings, products & builds — Hassler Isaac",
+      "metaDescription": "Client landings, owned products, and in-progress builds — clear web design and development focused on conversion and craft.",
+      "label": "// PROJECTS",
+      "title": "Live work, owned products, and builds in progress",
+      "lead": "Client landings, owned products, and active experiments — all with the same bar: clear, fast, and with personality.",
+      "backHome": "BACK TO HOME",
+      "groups": {
+        "client": "// CLIENT LANDINGS",
+        "own": "// OWNED PRODUCTS",
+        "inProgress": "// IN PROGRESS"
+      }
+    },
+    "items": [
+      {
+        "id": "dra-laura-giraldo",
+        "name": "Dra. Laura Giraldo",
+        "badge": "LIVE",
+        "badgeType": "live",
+        "description": "Clinical psychologist landing page: trust-building, testimonials, and clear CTAs that convert visitors into booked sessions.",
+        "tech": ["Landing", "SEO", "Conversion"],
+        "year": "2025",
+        "href": "https://dralauragiraldo.com/",
+        "external": true,
+        "owned": false
+      },
+      {
+        "id": "paola-hoyos",
+        "name": "Paola Hoyos",
+        "badge": "LIVE",
+        "badgeType": "live",
+        "description": "Interactive personal-brand landing for a digital strategist: storytelling, organic growth narrative, and opportunity capture.",
+        "tech": ["Landing", "Interactive UI", "Brand"],
+        "year": "2025",
+        "href": "https://paolahoyos.com",
+        "external": true,
+        "owned": false
+      },
+      {
+        "id": "col-freight",
+        "name": "COL Freight Solutions",
+        "badge": "LIVE",
+        "badgeType": "live",
+        "description": "B2B logistics landing for USA–Mexico–Canada freight: services, social proof, and lead capture (quote / specialist).",
+        "tech": ["B2B Landing", "SEO", "Leads"],
+        "year": "2025",
+        "href": "https://colfreightsolutions.com/",
+        "external": true,
+        "owned": false
+      },
+      {
+        "id": "planeatubebe",
+        "name": "Planea tu bebé",
+        "badge": "LIVE",
+        "badgeType": "live",
+        "description": "Own product: maternity expense planner that estimates and organizes costs by pregnancy stage.",
+        "tech": ["Angular", "Supabase", "Product"],
+        "year": "2025",
+        "href": "https://www.planeatubebe.co/",
+        "external": true,
+        "owned": true
+      },
+      {
+        "id": "perksradar",
+        "name": "PerksRadar",
+        "badge": "DEV",
+        "badgeType": "dev",
+        "description": "In development: a perks and benefits radar to discover, compare, and act on real opportunities.",
+        "tech": ["Product", "Next.js", "In progress"],
+        "year": "2026",
+        "href": "#",
+        "external": false,
+        "owned": true
+      },
+      {
+        "id": "livecanvas",
+        "name": "LiveCanvas",
+        "badge": "PROTO",
+        "badgeType": "proto",
+        "description": "Prototype: a live collaborative canvas for exploring ideas, layouts, and visual sessions in real time.",
+        "tech": ["Prototype", "Realtime", "UI"],
+        "year": "2026",
+        "href": "#",
+        "external": false,
+        "owned": true
+      }
+    ]
+  },
+  "footer": {
+    "label": "LET'S CONNECT",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "email": "Email"
+  },
+  "contactModal": {
+    "label": "// CONTACT",
+    "title": "Let's talk",
+    "lead": "Tell me about your idea, landing page, or product. I usually reply fast.",
+    "close": "Close",
+    "back": "Back",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "linkedinHint": "Direct message",
+    "phone": "Phone",
+    "formLabel": "// QUICK MESSAGE",
+    "formTitle": "Send email",
+    "formLead": "Write your message and open it in your email app, ready to send.",
+    "name": "Your name",
+    "namePlaceholder": "e.g. Ana Perez",
+    "yourEmail": "Your email",
+    "emailPlaceholder": "ana@company.com",
+    "message": "Message",
+    "messagePlaceholder": "Hi Hassler, I'd love to talk with you about…",
+    "defaultMessage": "",
+    "send": "SEND EMAIL",
+    "mailtoHint": "This opens your email app with the message ready for hisaaca10@gmail.com",
+    "subject": "Portfolio contact — Hassler Isaac",
+    "greeting": "Hi Hassler,",
+    "fromName": "Name",
+    "fromEmail": "Email"
+  },
+  "services": {
+    "metaTitle": "Services | Landings, Shopify ecommerce & software — Hassler Isaac",
+    "metaDescription": "Landing pages, Shopify-connected stores, and custom platforms (frontend, backend, and database) in Medellín, Barranquilla, and Colombia — for professions, products, and businesses.",
+    "metaKeywords": "web services Medellín, landing pages Colombia, Shopify ecommerce Colombia, software development Medellín, web platform Barranquilla, full stack Colombia, business website Colombia",
+    "label": "// SERVICES",
+    "title": "Landings, ecommerce & software — built around you",
+    "lead": "Not just landing pages. I design and build digital presence, Shopify-connected stores, and platforms with frontend, backend, and database — clear, fast, and aligned to your profession, product, or business.",
+    "cta": "LET'S START",
+    "seeWork": "SEE WORK",
+    "visualCaption": "From landing pages to full products",
+    "pillarsLabel": "What I can build",
+    "pillars": [
+      {
+        "tag": "// LANDING",
+        "title": "Landing pages",
+        "body": "Purpose-built pages for any profession or business: a clear message, fast load times, and a simple path to contact or sale — no generic templates."
+      },
+      {
+        "tag": "// ECOMMERCE",
+        "title": "Shopify ecommerce",
+        "body": "Stores connected to Shopify: catalog, checkout, and a shopping experience that matches your brand. Built to sell for real, not just look good."
+      },
+      {
+        "tag": "// SOFTWARE",
+        "title": "Software & platforms",
+        "body": "Custom products with frontend, backend, and database — real flows, panels, and business logic, not just a pretty page."
+      }
+    ],
+    "audienceLabel": "// WHO IT'S FOR",
+    "audienceTitle": "Any profession or product. One standard: quality.",
+    "audienceLead": "I work with people, brands, and teams that need anything from clear digital presence to an ecommerce store or a full platform.",
+    "audiences": [
+      "Independent professionals",
+      "Businesses & brands",
+      "Ecommerce",
+      "Teams & startups",
+      "Digital products",
+      "Specialized services"
+    ],
+    "citiesLabel": "Based in:",
+    "cities": ["Medellín", "Barranquilla", "Colombia (remote)"],
+    "faqLabel": "// FAQ",
+    "faqs": [
+      {
+        "q": "Do you work in Medellín and Barranquilla?",
+        "a": "Yes. Those are my main areas, and I also take remote projects across Colombia."
+      },
+      {
+        "q": "Do you only build landing pages?",
+        "a": "No. I also build Shopify-connected ecommerce and custom software or platforms (frontend, backend, and database), depending on what your business or product needs."
+      },
+      {
+        "q": "Does it work for my profession even if it's not tech?",
+        "a": "Yes. The approach is the same: understand what you offer, who you're talking to, and build the right digital piece — landing, store, or platform — with clarity and personality."
+      },
+      {
+        "q": "Is this custom design or a template?",
+        "a": "Custom. I start from your brand and business goal — no recycled themes with a logo stuck on top."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "It depends on scope (landing, store, or platform), but I aim for short cycles: define, design, iterate, and publish without dragging it forever."
+      }
+    ]
+  },
+  "jsonLd": {
+    "jobTitle": "Frontend & Full-Stack engineer | Landings, Shopify & platforms",
+    "description": "I design and build landing pages, Shopify ecommerce, and custom platforms (frontend, backend, and database) in Medellín and Barranquilla for professions, products, and businesses in Colombia.",
+    "knowsAbout": [
+      "Landing pages Medellín",
+      "Landing pages Barranquilla",
+      "Shopify ecommerce Colombia",
+      "Software development",
+      "Full-stack web platforms",
+      "Frontend and backend",
+      "Web design Colombia",
+      "Angular",
+      "TypeScript"
+    ],
+    "serviceName": "Web, ecommerce & software development in Medellín & Barranquilla",
+    "serviceDescription": "Landing pages, Shopify-connected stores, and custom platforms with frontend, backend, and database for professionals, products, and businesses in Colombia.",
+    "serviceTypes": [
+      "Landing page design",
+      "Shopify ecommerce",
+      "Software and platform development",
+      "Full-stack web development"
+    ],
+    "offerNames": [
+      "Custom professional landing page",
+      "Shopify-connected ecommerce",
+      "Platform or software (front, back & database)",
+      "Digital presence for businesses & brands"
+    ]
+  }
+}

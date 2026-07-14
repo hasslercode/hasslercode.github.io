@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hassler Isaac">
+  <rect width="64" height="64" rx="14" fill="#f4f5f2"/>
+  <path
+    fill="#0d9f6e"
+    d="M14 12h10v40H14V12zm26 0h10v40H40V12zm-16 17.5 8.8-8.8 4.2 4.2-8.8 8.8 8.8 8.8-4.2 4.2-8.8-8.8-4.2-4.2 4.2-4.2z"
+  />
+</svg>

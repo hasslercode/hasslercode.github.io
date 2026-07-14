@@ -1,103 +1,62 @@
-# Portafolio - Hassler Enrique Isaac Acosta
+# Hassler Isaac — Portfolio
 
-Portafolio personal como Ingeniero Frontend & Full-Stack creando productos digitales escalables.
+Portafolio personal en **Next.js 15** + **next-intl** (ES / EN), diseño bento.
 
-## 📁 Estructura del Proyecto
+## Stack
 
-```
-/
-├── index.html              # HTML principal
-├── css/
-│   └── styles.css         # Estilos personalizados
-├── js/
-│   └── script.js          # JavaScript personalizado
-├── README.md              # Este archivo
-└── .gitignore             # Archivos ignorados por git
-```
+- Next.js App Router (static export)
+- TypeScript
+- next-intl (locales `/es` y `/en`)
+- CSS propio (bento + light/dark)
 
-## 🚀 Características
+## Desarrollo
 
-- **Diseño Responsivo**: Adaptado para móviles, tablets y desktop
-- **Performance Optimizado**: Tailwind CSS CDN + Font Awesome 6.0.0
-- **Animaciones Suaves**: Scroll-based fade-in y efectos SVG
-- **Dark Mode**: Diseño oscuro moderno con gradientes púrpura
-- **Secciones Conectadas**: Conectores SVG dinámicos entre secciones
-
-## 📋 Secciones
-
-1. **Hero** - Presentación con foto, badge de experiencia y logos de empresas
-2. **Experiencia** - 3 roles profesionales con descripción e impacto
-3. **Proyectos Personales** - NestEgg, PerksRadar, LiveCanvas
-4. **Stack Técnico** - Tecnologías: Angular, React, Laravel, FastAPI, etc.
-5. **Contacto** - Enlaces a LinkedIn, GitHub y email
-
-## 🛠️ Tecnologías
-
-- **Frontend**: HTML5, Tailwind CSS, Font Awesome 6.0.0
-- **Animaciones**: SVG + CSS @keyframes
-- **CDN**: Clearbit Logo API, Simple Icons CDN
-- **JavaScript**: Vanilla JS - IntersectionObserver para scroll animations
-
-## 📱 Desplegar a GitHub Pages
-
-### Opción 1: Usar la carpeta raíz (recomendado)
-
-1. Pushea el código a tu repositorio GitHub:
 ```bash
-git add .
-git commit -m "Initial portfolio"
-git push origin main
+npm install
+npm run dev
 ```
 
-2. Ve a **Settings** → **Pages**
-3. Selecciona **Deploy from a branch**
-4. Elige **main** y **/ (root)**
-5. Click en **Save**
+Abre [http://localhost:3000](http://localhost:3000). La raíz redirige a `/es` (locale por defecto). Switcher ES ↔ EN en el header.
 
-Tu portafolio estará disponible en: `https://tuusuario.github.io/nombre-repo`
+## Idiomas y SEO
 
-### Opción 2: Usar carpeta `/docs`
+| Ruta | Idioma |
+|------|--------|
+| `/es/` | Español (default / x-default) |
+| `/en/` | English |
 
-1. Copia todo el contenido a una carpeta `/docs`
-2. En **Settings** → **Pages**
-3. Selecciona **Deploy from a branch**
-4. Elige **main** y **/docs**
-5. Click en **Save**
+- Prefijo de locale siempre presente (`localePrefix: always`)
+- `hreflang` + canonical por locale
+- `sitemap.xml` y `robots.txt`
+- JSON-LD: Person + WebSite + ProfessionalService
 
-## ✅ Verificación
+## Contenido editable
 
-- Abre tu URL en el navegador
-- Verifica que los logos de empresas cargen correctamente (Clearbit API)
-- Prueba las animaciones al hacer scroll
-- Revisa en mobile view con DevTools
+- Textos UI: `src/i18n/messages/es.json` y `en.json`
+- Datos del sitio: `src/lib/site.ts`
+- Estilos: `src/app/globals.css`
+- Componentes: `src/components/`
 
-## 📝 Modificaciones Frecuentes
+## Deploy (GitHub Pages)
 
-### Cambiar foto de perfil
-Reemplaza la URL en `index.html` línea ~215:
-```html
-<img src="TU_URL_DE_FOTO" alt="Hassler" class="w-full h-full object-cover">
+El sitio es un user Pages repo (`hasslercode.github.io`), servido en la raíz:
+
+**https://hasslercode.github.io/**
+
+Build estático (`output: "export"`) vía GitHub Actions (`.github/workflows/deploy-pages.yml`).
+
+```bash
+npm run build   # genera out/
 ```
 
-### Actualizar experiencia
-Edita las secciones de experiencia en `index.html` (~línea 395)
+Notas para static export:
 
-### Cambiar tema de colores
-Modifica variables de color en `css/styles.css`:
-- `#a855f7` - Purple 500
-- `#7c3aed` - Purple 600
+- Sin middleware (incompatible con export estático)
+- `images.unoptimized: true`
+- `trailingSlash: true` (rutas amigables en Pages)
 
-## 🔗 Enlaces Útiles
+## Assets
 
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [Font Awesome Icons](https://fontawesome.com/icons)
-- [Simple Icons CDN](https://simpleicons.org/)
-- [GitHub Pages Docs](https://docs.github.com/en/pages)
-
-## 📄 Licencia
-
-Este proyecto es de uso personal. Siéntete libre de adaptarlo a tus necesidades.
-
----
-
-**Última actualización:** Abril 2026
+- Foto: `public/images/profile/hassler-principal.jpg`
+- CV: `public/cv/CVHassler2026.pdf`
+- Proyectos: `public/images/projects/`
